@@ -76,9 +76,8 @@ $(document).ready(function () {
     $("#home").hide();
 
     // Area de post
-var post = document.getElementById('post');
 
-post.addEventListener('click', function(){
+$("#npost").on('click', function(){
     //tenemos que tomar el texto ingresado en el textarea
     var comments = document.getElementById('comment').value;
 
@@ -137,12 +136,49 @@ post.addEventListener('click', function(){
         window.location = "picture.html";
         $("#nav-bar").show();
     }) 
-// fin fotos ------------------------------------------------------->
+// fin  link fotos ------------------------------------------------------->
 
-// Inicio Fotos ------------------------------------------------------->
-// $("#btn-agregar").on("click", function () {
+// Inicio carga Fotos ------------------------------------------------------->
+/*Al  hacer Click en el boton agregar fotos, se muestra un formulario
+con inputs que permiten ingresar informacion al panel que contendrá a la fotografía que se 
+cargará desde una dirección web*/   
+    $("#btn-agregar").on('click', function () {
 
-// $("#nuevas-fotos").append("<div id='pin_" + idPin + "' class='pin col-xs-12 col-sm-12 col-md-3'>";
-//     )}
+        $("#info-fotos").css("display","block");
 
-// fin de fotos ------------------------------------------------------->
+            var tema = $("#tituloInput").val();
+    var descripcion = $("#descripcionInput").val();
+    var url = $("#urlInput").val();
+
+
+
+       $("#nuevas-fotos").append("<div id='pin_" + "' class='pin col-xs-12 col-sm-12 col-md-3'>" +
+            
+            "<div class='panel panel-success front'>" +
+            "<div class='panel-heading'>" +
+            "<h3 class='panel-title'>" + tema + "</h3>" +
+            "</div>" +
+            "<div class = 'panel-body' >" +
+            "<a href='#' class='thumbnail'>" +
+            "<img src='" + url + "' alt='...'>" +
+            "</a>" +
+            "</div>" +
+            "<div class = 'panel-footer' >" + descripcion + "</div> </div>")
+            
+            
+    $("#tituloInput").val("");
+    $("#descripcionInput").val("");
+    $("#urlInput").val("");
+
+    
+    })
+/* De cada item del formulario, se obtendrá el texto que ingresará el usuario
+y generamos las variables correspondientes*/ 
+    
+function savePin() {
+
+
+
+}
+
+// fin de carga fotos ------------------------------------------------------->
