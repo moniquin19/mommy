@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mommy's</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div id="nav-bar" class="navbar-wrapper">
+        <div class="container-fluid">
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img src="assets/images/mamá.png" alt="">
+                        <h5>Mommy's</h5>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#" class="">Home</a>
+                            </li>
+                            <li class=" dropdown">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bebes
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class=" dropdown">
+                                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NewBorn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1 a 4 meses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5 a 8 meses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">9 a 12 meses</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Niños
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">1 a 3 años</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4 a 7 años</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">8 a 11 años</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Crianza
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Bebes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Niños</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Adolescentes</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class=" down">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Salud
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Madres y Padres</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hijos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="fotoname">
+                        <img src="assets/images/mama1.jpeg" alt="">
+                    </div>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class=" dropdown">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Carmen Rodríguez
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a id="perfil" href="#">Mi Perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cambiar Contraseña</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div> <!-- fin del menu de navegacion -->
+    <!-- ================ INICIA FORMULARIO DE LOGIN ============================================================== -->
+    <div class="container">
+
+        <div id="registro" class="row" style="margin-top:60px">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                <form id="welcome" role="form" action="javascript:void(0)">
+                    <fieldset>
+                        <h1>Bienvenidos a Mommy's</h1>
+                        <h2>Por Favor Ingresa</h2>
+                        <hr class="colorgraph">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Dirección de E-Mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Clave">
+                        </div>
+                        <span class="button-checkbox">
+                            <button id="remember" type="button" class="btn" data-color="info">Recordarme</button>
+                            <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+                            <a href="" class="btn btn-link pull-right">Recordar Contraseña?</a>
+                        </span>
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <input type="submit" id="ingresar" class="btn btn-sm btn-success btn-block" value="Acceder">
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <a href="" id="regis" class="btn btn-sm btn-primary btn-block">Registro</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SESION DE TEMAS A UNIRSE -->
+<section id="home">
+    <div class="container">
+        <div class="row one">
+<!-- Tema Bebe -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-responsive" src="assets/images/bebe.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Bebes</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn">Unete</a>
+                     </div>
+                </div>
+             </div>
+<!-- Tema Niños -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/niños.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Niños</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn">Unete</a>
+            </div>
+        </div>
+</div>
+<!-- Tema Crianza -->
+<div class="col-sm-4 col-md-4 col-lg-4">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top img-responsive" src="assets/images/crianza.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Crianza</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn">Unete</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+<!-- Tema Preguntale al Doc -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/preguntaDoc.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Preguntale al Doc</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn">Unete</a>
+                </div>
+        </div>
+    </div>
+
+    <!-- Tema Mamá & Familia -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/familia diversion.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Mamá / Familia</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn">Unete</a>
+                </div>
+        </div>
+    </div>
+        <!-- Tema MarketPlace -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/marketplace.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">MarketPlace</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn">Unete</a>
+                </div>
+        </div>
+    </div>
+<div class="row">
+            <!-- Tema Manualidades -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/manualidades.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Manualidades</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn">Unete</a>
+                </div>
+        </div>
+    </div>
+            <!-- Tema Recetas -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/recetas-infantiles.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Recetas</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn">Unete</a>
+                </div>
+        </div>
+    </div>
+            <!-- Tema Foros -->
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="assets/images/foropadres.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Foros</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn">Unete</a>
+                </div>
+        </div>
+    </div>
+</div>
+   
+    </div>
+</div>
+</section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
