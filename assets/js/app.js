@@ -1,7 +1,7 @@
-/* Caracteristicas de formulario inicial*/
+//Caracteristicas de formulario inicial
 $(function () {
     $('.button-checkbox').each(function () {
-        var $widget = $(this),
+        let $widget = $(this),
             $button = $widget.find('button'),
             $checkbox = $widget.find('input:checkbox'),
             color = $button.data('color'),
@@ -25,16 +25,16 @@ $(function () {
         });
 
         function updateDisplay() {
-            var isChecked = $checkbox.is(':checked');
-            // Set the button's state
+            let isChecked = $checkbox.is(':checked');
+            // establecer el estado del botón
             $button.data('state', (isChecked) ? "on" : "off");
 
-            // Set the button's icon
+            //establecer el ícono del botón
             $button.find('.state-icon')
                 .removeClass()
                 .addClass('state-icon ' + settings[$button.data('state')].icon);
 
-            // Update the button's color
+            //actualizar el color del boton
             if (isChecked) {
                 $button
                     .removeClass('btn-default')
@@ -48,7 +48,7 @@ $(function () {
 
         function init() {
             updateDisplay();
-            // Inject the icon if applicable
+            //Tildar si corresponde
             if ($button.find('.state-icon').length == 0) {
                 $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
             }
@@ -57,10 +57,10 @@ $(function () {
     });
 });
 
-/*Función principal*/
+//Función principal
 $(document).ready(function () {
     $("#nav-bar").hide();
-    /*Al hacer click en el boton acceder, se oculta el formulario e
+    /**Al hacer click en el boton acceder, se oculta el formulario e
     ingresamos a la pagina principal*/
     $("#ingresar").on("click", function () {
         $("#nav-bar").show();
@@ -72,42 +72,42 @@ $(document).ready(function () {
         window.location = "profile.html"
     })  
 })
-    /*Ocultar los  temas  de la pagina de registro*/
+    //Ocultar los  temas  de la pagina de registro
     $("#home").hide();
 
-    // Area de post
+    //Area de post
 
 $("#npost").on('click', function(){
-    //tenemos que tomar el texto ingresado en el textarea
-    var comments = document.getElementById('comment').value;
+    //tomar texto ingresado en el textarea
+    let comments = document.getElementById('comment').value;
 
     //limpiar el textarea
     document.getElementById('comment').value = '';
 
-    //contenedor que esta en el html
-    var cont = document.getElementById('cont');
+    //contenedor en el html
+    let cont = document.getElementById('cont');
 
-    //creamos el div que contiene cada comentario
-    var newComments = document.createElement('div');
+    //creacion del div que contiene cada comentario
+    let newComments = document.createElement('div');
 
-    //validar que textarea tenga un msje
+    //validacion de  textarea con mensaje
     if(comments.length == 0 || comments == null) {
-        alert('Debes ingresar un mensaje');
+        alert('Por favor ingresar un mensaje');
         return false;
     }
-    //crear checkbox
-    var chck = document.createElement('input');
+    //creacion del checkbox
+    let chck = document.createElement('input');
     chck.type = 'checkbox';
-    //creamos icono de corazon
-    var heart = document.createElement('i');
+    //creacion icono de heart
+    let heart = document.createElement('i');
     heart.classList.add('fa', 'fa-heart', 'heart');
-    //creamos icono de basura
-    var trash = document.createElement('i');
+    //creacion icono de basura
+    let trash = document.createElement('i');
     trash.classList.add('fa', 'fa-trash', 'trash');
     //nodos de texto del textarea
     var textNewComment = document.createTextNode(comments);
 
-    var contenedorElemento = document.createElement('p');
+    let contenedorElemento = document.createElement('p');
     contenedorElemento.appendChild(textNewComment);
     newComments.appendChild(chck);
     newComments.appendChild(trash);
@@ -123,7 +123,7 @@ $("#npost").on('click', function(){
     trash.addEventListener('click', function(){
         cont.removeChild(newComments);
     })
-    //evento que agrega tachado al párrafo al hacer click en el checkbox
+    //evento de adjutar tachado al párrafo al hacer click en checkbox
     chck.addEventListener('click', function(){
         contenedorElemento.classList.toggle('strike-out'); //agrego clase tachado a parrafo contenedor de comentarios, se activa al hacer click, toggle es como un switch, agrega y quita sucesivamente
     })
@@ -131,24 +131,24 @@ $("#npost").on('click', function(){
 }) //fin de post
 
 
-// link a mis fotos ------------------------------------------------------->
+//link a mis fotos 
     $("#theme").click(function () {
         window.location = "picture.html";
         $("#nav-bar").show();
     }) 
-// fin  link fotos ------------------------------------------------------->
+//fin  link fotos 
 
-// Inicio carga Fotos ------------------------------------------------------->
-/*Al  hacer Click en el boton agregar fotos, se muestra un formulario
+// Inicio carga Fotos 
+/** Al  hacer Click en el boton agregar fotos, se muestra un formulario
 con inputs que permiten ingresar informacion al panel que contendrá a la fotografía que se 
-cargará desde una dirección web*/   
+cargará desde una dirección web */   
     $("#btn-agregar").on('click', function () {
 
         $("#info-fotos").css("display","block");
 
-            var tema = $("#tituloInput").val();
-    var descripcion = $("#descripcionInput").val();
-    var url = $("#urlInput").val();
+            let tema = $("#tituloInput").val();
+    let descripcion = $("#descripcionInput").val();
+    let url = $("#urlInput").val();
 
 
 
@@ -172,13 +172,8 @@ cargará desde una dirección web*/
 
     
     })
-/* De cada item del formulario, se obtendrá el texto que ingresará el usuario
+/** De cada item del formulario, se obtendrá el texto que ingresará el usuario
 y generamos las variables correspondientes*/ 
     
-function savePin() {
 
-
-
-}
-
-// fin de carga fotos ------------------------------------------------------->
+//fin de carga fotos
